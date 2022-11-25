@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root {
+    --titulos: #EDF2F4;
+    --fondomenus: #2B2D42;
+    --fondo: #8D99AE;
+    --rojo:  #EF233C;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;  
+    list-style-type: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: var(--fondo);
+    max-width: 1400px;
+}
+
+
+/*MENU PRINCIPAL*/
+
+.navbar {
+    background-color: var(--fondomenus);
+}
+
+.navbar-lista {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    flex-wrap: wrap;
+    height: 50%;
+    padding: 1em;
+}
+
+.navbar-lista li a { 
+    color: var(--titulos);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.navbar-lista a:hover {
+color: var(--parrafos);
+}
+    
+/*SECCION PRINCIPAL MAIN*/
+
+
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    padding: 2em;
+    gap: 2em;
+    background-color: var(--fondomenus);
+    border-radius: 1em;
+    margin: 2em;
+}
+
+.contenedor__imagenes img {
+    max-width: 1000px;
+    max-height: 500px;
+    border-radius: 1em;
+}
+
+.contenedor__informacion {
+    display: flex;  
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contenedor__informacion p{
+max-height: 150px;
+max-width: 600px;
+color: var(--fondo);
+font-size: 14px;
+}
+
+.contenedor__informacion h2{
+    color: var(--rojo);
+}
+
+
+/*SECCION TRAGOS FOTOS*/
+
+.tragos__contenedor {
+    padding: 1em;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 350px 350px 350px 350px;
+    grid-auto-rows: 1fr;
+    height: 60vh;
+}
+
+.tragos__imagenes{
+    border-radius: 1em;
+    display: grid;
+    margin: 2em;
+}
+
+.tragos__imagenes:nth-child(1){
+    background: url(./pisco.jpg) no-repeat center/cover;
+}
+
+.tragos__imagenes:nth-child(2){
+    background: url(./old\ fashioned.jpg) no-repeat center/cover;
+}
+
+.tragos__imagenes:nth-child(3){
+    background: url(./Manhattan.jpg) no-repeat center/cover;
+}
+
+.tragos__imagenes:nth-child(4){
+    background: url(./cosmopolitan.jpg) no-repeat center/cover;
+}
+
+
+
+/*SECCION TRAGOS RECETAS*/
+
+.recetas__contenedor {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1em;
+
+}
+
+
+.recetas__contenedores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3em;
+}
+
+
+
+.recetas__contenedor h2 {
+    color: var(--rojo);
+}
+
+.recetas__items {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--fondomenus);
+    color: var(--titulos);
+    border-radius: 1em;
+    width: 300px;
+    height: 300px;
+}
+
+
+/*SECCION CONTACTO Y MAPA*/
+
+.contacto {
+    display: flex;
+    align-items: center;
+    gap: 5em;
+    margin: 5em 2em 2em 2em;
+    padding: 1em;
+    
+}
+
+.formulario {
+    width: 50%;
+    background-color: var(--rojo);
+    margin: 1em;
+    padding: 4em 1em 4em 1em;
+    border-radius: 1em;
+    box-shadow: 0 5px 10px -5px;
+    text-align: center;
+  }
+
+.formulario__titulo {
+    font-size: 2em;
+    margin-bottom: .5em;
+
+}
+
+.formulario__texto {
+    font-weight: 300;
+}
+
+.formulario__link{
+    font-weight: 400;
+    color: #000;
+}
+
+.formulario__contenedor {
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.formulario__grupo {
+    position: relative;
+}
+
+.formulario__input {
+width: 100%;
+background: none;
+color: #020202;
+font-size: 1rem;
+padding: .6em .3em;
+border: none;
+outline: none;
+border-bottom: 1px solid var(--fondomenus);
+font-family: 'Rubik', sans-serif;
+}
+
+.form__label {
+    color: var(--titulos);
+}
+
+
+.formulario__ingresar {
+    background-color: var(--titulos);
+    border: none;
+
+}
