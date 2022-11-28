@@ -5,6 +5,7 @@
     --fondomenus: #2B2D42;
     --fondo: #8D99AE;
     --rojo:  #EF233C;
+    --negro: black;
 }
 
 *{
@@ -17,16 +18,18 @@
 }
 
 body {
-    background-color: var(--fondo);
-    max-width: 1400px;
+    background-color: var(--negro);
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+header {
+    position: sticky;
+    top: 0px;
 }
 
 
 /*MENU PRINCIPAL*/
-
-.navbar {
-    background-color: var(--fondomenus);
-}
 
 .navbar-lista {
     display: flex;
@@ -44,7 +47,7 @@ body {
 }
 
 .navbar-lista a:hover {
-color: var(--parrafos);
+color: var(--rojo);
 }
     
 /*SECCION PRINCIPAL MAIN*/
@@ -58,13 +61,11 @@ color: var(--parrafos);
     align-items: start;
     padding: 2em;
     gap: 2em;
-    background-color: var(--fondomenus);
-    border-radius: 1em;
     margin: 2em;
 }
 
 .contenedor__imagenes img {
-    max-width: 1000px;
+    max-width: 500px;
     max-height: 500px;
     border-radius: 1em;
 }
@@ -76,14 +77,13 @@ color: var(--parrafos);
 }
 
 .contenedor__informacion p{
-max-height: 150px;
-max-width: 600px;
-color: var(--fondo);
-font-size: 14px;
+color: var(--titulos);
+font-size: 0.938em;
 }
 
 .contenedor__informacion h2{
     color: var(--rojo);
+    font-size: 2em;
 }
 
 
@@ -124,11 +124,12 @@ font-size: 14px;
 
 /*SECCION TRAGOS RECETAS*/
 
-.recetas__contenedor {
+.recetas {
     display: flex;
     flex-direction: column;
     align-content: center;
     gap: 1em;
+    margin: 1em;
 
 }
 
@@ -142,7 +143,7 @@ font-size: 14px;
 
 
 
-.recetas__contenedor h2 {
+.recetas h2 {
     color: var(--rojo);
 }
 
@@ -165,7 +166,7 @@ font-size: 14px;
 .contacto {
     display: flex;
     align-items: center;
-    gap: 5em;
+    gap: 15em;
     margin: 5em 2em 2em 2em;
     padding: 1em;
     
@@ -226,5 +227,117 @@ font-family: 'Rubik', sans-serif;
 .formulario__ingresar {
     background-color: var(--titulos);
     border: none;
+
+}
+
+
+/*SECCION FOOTER*/
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    font-size: 0.938em;
+    padding: 1em;
+    
+}
+
+.footer p {
+    color: var(--rojo);
+}
+
+
+/*@MEDIAS*/
+
+@media (min-width: 768px) and (max-width: 1199px)
+{ 
+.contenedor {
+
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tragos__contenedor {
+
+ grid-template-columns: 200px 200px 200px 200px;
+ margin: 1em;
+
+
+}
+
+.contacto {
+    gap: 1em;
+}
+
+}
+
+@media (max-width: 480px) 
+
+{
+.contenedor {
+
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    
+}
+    
+.tragos__contenedor {
+    grid-template-columns: 120px 120px 120px 120px;
+    
+}
+
+
+
+    
+.contacto {
+    gap: 2px;
+}   
+
+.recetas__items   {
+    width: 200px;
+    max-height: 300px;
+}
+
+.recetas__contenedores {
+flex-wrap: wrap;
+}
+
+
+.contenedor__informacion p{
+    color: var(--titulos);
+    font-size: 0.75em;
+    font-weight: 150;
+}
+
+}
+
+
+
+@media (max-width: 767px) {
+
+    .contenedor {
+
+        max-width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    .tragos__contenedor {
+    
+     grid-template-columns: 200px 200px 200px 200px;
+     margin: 1em;
+    
+    }
+    
+    .contacto {
+        gap: 1em;
+    }
+    
+    }
 
 }
