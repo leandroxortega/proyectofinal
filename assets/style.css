@@ -58,7 +58,7 @@ color: var(--rojo);
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     padding: 2em;
     gap: 2em;
     margin: 2em;
@@ -90,35 +90,20 @@ font-size: 0.938em;
 /*SECCION TRAGOS FOTOS*/
 
 .tragos__contenedor {
-    padding: 1em;
-    display: grid;
-    place-content: center;
-    grid-template-columns: 350px 350px 350px 350px;
-    grid-auto-rows: 1fr;
-    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3em;
+    margin: 3em;
 }
 
-.tragos__imagenes{
+.tragos__imagenes img{
+    max-width: 300px;
+    max-height: 300px;
     border-radius: 1em;
-    display: grid;
-    margin: 2em;
 }
 
-.tragos__imagenes:nth-child(1){
-    background: url(./pisco.jpg) no-repeat center/cover;
-}
 
-.tragos__imagenes:nth-child(2){
-    background: url(./old\ fashioned.jpg) no-repeat center/cover;
-}
-
-.tragos__imagenes:nth-child(3){
-    background: url(./Manhattan.jpg) no-repeat center/cover;
-}
-
-.tragos__imagenes:nth-child(4){
-    background: url(./cosmopolitan.jpg) no-repeat center/cover;
-}
 
 
 
@@ -166,14 +151,14 @@ font-size: 0.938em;
 .contacto {
     display: flex;
     align-items: center;
-    gap: 15em;
+    gap: 7em;
     margin: 5em 2em 2em 2em;
     padding: 1em;
     
 }
 
 .formulario {
-    width: 50%;
+    width: 100%;
     background-color: var(--rojo);
     margin: 1em;
     padding: 4em 1em 4em 1em;
@@ -230,6 +215,11 @@ font-family: 'Rubik', sans-serif;
 
 }
 
+.mapa iframe {
+    height: 500px;
+    width: 500px;
+}
+
 
 /*SECCION FOOTER*/
 
@@ -252,14 +242,18 @@ font-family: 'Rubik', sans-serif;
 
 @media (min-width: 768px) and (max-width: 1199px)
 { 
+
+
+ /*SECCION PRINCIPAL MAIN*/
 .contenedor {
 
-    max-width: 700px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
 
 }
 
+/*SECCION TRAGOS FOTOS*/
 .tragos__contenedor {
 
  grid-template-columns: 200px 200px 200px 200px;
@@ -267,7 +261,7 @@ font-family: 'Rubik', sans-serif;
 
 
 }
-
+/*SECCION CONTACTO Y MAPA*/
 .contacto {
     gap: 1em;
 }
@@ -277,25 +271,39 @@ font-family: 'Rubik', sans-serif;
 @media (max-width: 480px) 
 
 {
+
+ /*SECCION PRINCIPAL MAIN*/
 .contenedor {
 
-    max-width: 500px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
-    
+}
+
+.contenedor__imagenes img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 1em;
+}
+
+
+.contenedor__imagenes img {
+    height: 150px;
+    width: 250px;
 }
     
+/*SECCION TRAGOS FOTOS*/
 .tragos__contenedor {
-    grid-template-columns: 120px 120px 120px 120px;
-    
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.tragos__imagenes img {
+    margin: 1em;
 }
 
 
-
-    
-.contacto {
-    gap: 2px;
-}   
+/*SECCION TRAGOS RECETAS*/
 
 .recetas__items   {
     width: 200px;
@@ -306,14 +314,27 @@ font-family: 'Rubik', sans-serif;
 flex-wrap: wrap;
 }
 
-
 .contenedor__informacion p{
     color: var(--titulos);
     font-size: 0.75em;
     font-weight: 150;
 }
 
+
+/*SECCION CONTACTO Y MAPA*/
+.contacto {
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
 }
+.mapa iframe {
+    max-width: 250px;
+    max-height: 250px;
+}
+}
+
+
+
 
 
 
@@ -340,4 +361,68 @@ flex-wrap: wrap;
     
     }
 
+
+ @media (max-width: 767px) {
+/*SECCION PRINCIPAL MAIN*/
+.contenedor {
+
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
 }
+
+.contenedor__imagenes img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 1em;
+}
+
+
+.contenedor__imagenes img {
+    height: 150px;
+    width: 250px;
+}
+    
+/*SECCION TRAGOS FOTOS*/
+.tragos__contenedor {
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.tragos__imagenes img {
+    margin: 1em;
+    height: 200px;
+    width: 200px;
+}
+
+
+/*SECCION TRAGOS RECETAS*/
+
+.recetas__items   {
+    width: 200px;
+    max-height: 300px;
+}
+
+.recetas__contenedores {
+flex-wrap: wrap;
+}
+
+.contenedor__informacion p{
+    color: var(--titulos);
+    font-size: 0.75em;
+    font-weight: 150;
+}
+
+
+/*SECCION CONTACTO Y MAPA*/
+.contacto {
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+.mapa iframe {
+    max-width: 250px;
+    max-height: 250px;
+}
+}
+    
